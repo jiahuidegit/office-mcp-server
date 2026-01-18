@@ -1,6 +1,6 @@
 {
   "name": "@erliban/office-mcp-server",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "MCP server for generating professional Word and Excel documents with enterprise-grade styling",
   "keywords": [
     "mcp",
