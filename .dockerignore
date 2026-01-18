@@ -1,0 +1,34 @@
+# Git
+.git
+.gitignore
+
+# Dependencies
+node_modules
+
+# Source (only dist is needed)
+src
+*.ts
+tsconfig.json
+
+# IDE
+.idea
+.vscode
+*.swp
+
+# Test
+coverage
+*.test.ts
+vitest.config.ts
+
+# Docs
+*.md
+LICENSE
+
+# CI/CD
+.github
+
+# Other
+.eslintrc.cjs
+.prettierrc
+.DS_Store
+*.log
