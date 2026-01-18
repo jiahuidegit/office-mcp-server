@@ -2,19 +2,126 @@
 
 <div align="center">
 
+**🔥 AI-Powered Professional Document Generation MCP Server**
+
 **🔥 AI 驱动的专业文档生成 MCP 服务**
 
 [![npm version](https://img.shields.io/npm/v/@erliban/office-mcp-server.svg)](https://www.npmjs.com/package/@erliban/office-mcp-server)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Node.js](https://img.shields.io/badge/Node.js-18+-green.svg)](https://nodejs.org/)
 
+*8 Document Themes | 6 Mermaid Chart Styles | China National Standards Compliant*
+
 *支持 8 种文档风格主题 | 6 种 Mermaid 图表配色 | 符合国家标准规范*
+
+[English](#english) | [中文](#中文)
 
 </div>
 
 ---
 
-## ✨ 核心优势
+<a name="english"></a>
+## English
+
+### ✨ Core Features
+
+| Feature | Description |
+|---------|-------------|
+| **🎯 Professional Documents** | Compliant with GB/T 9704-2012 (Government), GB/T 8567-2006 (Software) standards |
+| **🎨 Multiple Themes** | 8 document themes + 6 Mermaid chart color schemes |
+| **📊 Mermaid Diagrams** | Auto-convert flowcharts, sequence diagrams to PNG images |
+| **🤖 AI Native** | Designed for Claude, ChatGPT via MCP protocol |
+| **⚡ Ready to Use** | One command to start |
+
+### 📦 Quick Start
+
+#### Installation
+
+```bash
+npm install -g @erliban/office-mcp-server
+```
+
+#### Claude Desktop Configuration
+
+Add to `claude_desktop_config.json`:
+
+```json
+{
+  "mcpServers": {
+    "office": {
+      "command": "npx",
+      "args": ["@erliban/office-mcp-server"]
+    }
+  }
+}
+```
+
+**Config file location**:
+- macOS: `~/Library/Application Support/Claude/claude_desktop_config.json`
+- Windows: `%APPDATA%\Claude\claude_desktop_config.json`
+
+### 🎨 Document Themes
+
+#### Standard Themes
+
+| Theme | Name | Use Case | Standard |
+|-------|------|----------|----------|
+| `government` | Government | Official documents | GB/T 9704-2012 |
+| `academic` | Academic | Thesis, research | Academic standards |
+| `software` | Software | Requirements, design docs | GB/T 8567-2006 |
+| `business` | Business | Reports, proposals | Enterprise standards |
+
+#### Brand Themes
+
+| Theme | Name | Color | Industry |
+|-------|------|-------|----------|
+| `alibaba` | Alibaba | Orange | E-commerce |
+| `tencent` | Tencent | Green | Social, Finance |
+| `bytedance` | ByteDance | Black | Tech, Media |
+| `minimal` | Minimal | B&W | Universal |
+
+### 📊 Mermaid Chart Themes
+
+| Theme | Name | Color | Best For |
+|-------|------|-------|----------|
+| `professional` | Professional | Blue #4a90d9 | Technical docs |
+| `fresh` | Fresh | Green #52c41a | Flowcharts |
+| `business` | Business | Gray #595959 | Formal reports |
+| `tech` | Tech | Purple #722ed1 | Product docs |
+| `warm` | Warm | Orange #fa8c16 | Proposals |
+| `default` | Default | Mermaid default | General |
+
+### 🛠️ Available Tools
+
+#### Word Tools
+
+| Tool | Description |
+|------|-------------|
+| `word_create` | Create Word document |
+| `word_add_heading` | Add heading |
+| `word_add_paragraph` | Add paragraph |
+| `word_add_table` | Add table |
+| `word_add_list` | Add list |
+| `word_add_code` | Add code block |
+| `word_add_diagram` | Add Mermaid diagram |
+| `word_save` | Save document |
+
+#### Excel Tools
+
+| Tool | Description |
+|------|-------------|
+| `excel_create` | Create workbook |
+| `excel_add_sheet` | Add worksheet |
+| `excel_write_data` | Write data |
+| `excel_add_chart` | Add chart |
+| `excel_save` | Save workbook |
+
+---
+
+<a name="中文"></a>
+## 中文
+
+### ✨ 核心优势
 
 | 特性 | 描述 |
 |------|------|
@@ -24,19 +131,17 @@
 | **🤖 AI 原生** | 专为 Claude、ChatGPT 等 AI 设计，通过 MCP 协议无缝集成 |
 | **⚡ 开箱即用** | 无需复杂配置，一行命令即可启动服务 |
 
----
+### 📦 快速开始
 
-## 📦 快速开始
-
-### 安装
+#### 安装
 
 ```bash
 npm install -g @erliban/office-mcp-server
 ```
 
-### Claude Desktop 配置
+#### Claude Desktop 配置
 
-将以下配置添加到 Claude Desktop 的 `claude_desktop_config.json`：
+将以下配置添加到 `claude_desktop_config.json`：
 
 ```json
 {
@@ -53,7 +158,7 @@ npm install -g @erliban/office-mcp-server
 - macOS: `~/Library/Application Support/Claude/claude_desktop_config.json`
 - Windows: `%APPDATA%\Claude\claude_desktop_config.json`
 
-### 指定输出目录（推荐）
+#### 指定输出目录（推荐）
 
 ```json
 {
@@ -69,11 +174,9 @@ npm install -g @erliban/office-mcp-server
 }
 ```
 
----
+### 🎯 推荐 Prompt
 
-## 🎯 推荐 Prompt
-
-将以下内容添加到 Claude 的系统提示或项目 CLAUDE.md 中，可获得最佳文档生成效果：
+将以下内容添加到 Claude 的系统提示或项目 CLAUDE.md 中：
 
 ```markdown
 ## Office 文档生成规范
@@ -110,11 +213,9 @@ npm install -g @erliban/office-mcp-server
 7. word_save → 保存文档
 ```
 
----
+### 🎨 文档主题一览
 
-## 🎨 文档主题一览
-
-### 标准规范主题
+#### 标准规范主题
 
 | 主题 | 名称 | 适用场景 | 参考标准 |
 |------|------|---------|---------|
@@ -123,7 +224,7 @@ npm install -g @erliban/office-mcp-server
 | `software` | 软件文档 | 需求规格、设计文档 | GB/T 8567-2006 |
 | `business` | 商务报告 | 商业计划书、工作汇报 | 企业文档规范 |
 
-### 企业品牌主题
+#### 企业品牌主题
 
 | 主题 | 名称 | 主色调 | 适用行业 |
 |------|------|--------|---------|
@@ -132,9 +233,7 @@ npm install -g @erliban/office-mcp-server
 | `bytedance` | 字节风格 | 黑色系 | 科技、媒体 |
 | `minimal` | 简约黑白 | 黑白 | 通用正式场合 |
 
----
-
-## 📊 Mermaid 图表主题
+### 📊 Mermaid 图表主题
 
 AI 可自动识别文档中的 Mermaid 语法并转换为专业图片：
 
@@ -156,11 +255,9 @@ AI 可自动识别文档中的 Mermaid 语法并转换为专业图片：
 - `gantt` - 甘特图
 - `pie` - 饼图
 
----
+### 🛠️ 可用工具
 
-## 🛠️ 可用工具
-
-### Word 文档工具
+#### Word 文档工具
 
 | 工具名 | 描述 | 关键参数 |
 |--------|------|---------|
@@ -174,7 +271,7 @@ AI 可自动识别文档中的 Mermaid 语法并转换为专业图片：
 | `word_add_image` | 添加图片 | `path`, `width`: 宽度(cm) |
 | `word_save` | 保存文档 | `path`: 保存路径 |
 
-### Excel 表格工具
+#### Excel 表格工具
 
 | 工具名 | 描述 | 关键参数 |
 |--------|------|---------|
@@ -185,11 +282,9 @@ AI 可自动识别文档中的 Mermaid 语法并转换为专业图片：
 | `excel_add_formula` | 添加公式 | `cell`, `formula` |
 | `excel_save` | 保存工作簿 | `path`: 保存路径 |
 
----
+### 💡 使用示例
 
-## 💡 使用示例
-
-### 示例 1：生成软件需求文档
+#### 示例 1：生成软件需求文档
 
 ```
 帮我生成一份用户管理模块的需求规格说明书，使用软件文档主题。包含：
@@ -199,13 +294,7 @@ AI 可自动识别文档中的 Mermaid 语法并转换为专业图片：
 4. 接口定义
 ```
 
-AI 将自动：
-- 使用 `software` 主题（符合 GB/T 8567-2006）
-- 正文使用小四宋体，1.5 倍行距
-- 自动转换 Mermaid 流程图为 PNG 图片
-- 生成符合规范的 .docx 文件
-
-### 示例 2：生成产品分析报告
+#### 示例 2：生成产品分析报告
 
 ```
 帮我写一份 AI 智能音箱的产品方案分析，使用字节风格。需要包含：
@@ -214,63 +303,27 @@ AI 将自动：
 - 成本估算
 ```
 
-### 示例 3：生成学术论文
-
-```
-帮我整理研究数据，生成一份学术论文格式的报告，使用学术论文主题。
-```
-
 ---
 
-## 🔧 开发
+## 🔧 Development | 开发
 
 ```bash
-# 克隆项目
-git clone https://github.com/erliban/office-mcp-server.git
+# Clone | 克隆
+git clone https://github.com/jiahuidegit/office-mcp-server.git
 cd office-mcp-server
 
-# 安装依赖
+# Install | 安装依赖
 npm install
 
-# 开发模式
+# Dev mode | 开发模式
 npm run dev
 
-# 构建
+# Build | 构建
 npm run build
 
-# 运行测试
+# Test | 测试
 npm test
-
-# 代码检查
-npm run lint
 ```
-
----
-
-## 📁 项目结构
-
-```
-erliban-office-mcp-server/
-├── src/
-│   ├── index.ts              # MCP 服务入口
-│   ├── tools/
-│   │   ├── word/             # Word 文档工具
-│   │   │   └── index.ts      # word_* 工具实现
-│   │   └── excel/            # Excel 表格工具
-│   │       └── index.ts      # excel_* 工具实现
-│   └── styles/
-│       └── themes/
-│           └── index.ts      # 主题定义（8种文档 + 6种图表主题）
-├── package.json
-├── tsconfig.json
-└── README.md
-```
-
----
-
-## 🤝 贡献
-
-欢迎提交 Issue 和 Pull Request！
 
 ---
 
