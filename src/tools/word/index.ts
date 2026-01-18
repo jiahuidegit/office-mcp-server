@@ -19,9 +19,7 @@ import {
   Header,
   Footer,
   PageNumber,
-  NumberFormat,
   LineRuleType,
-  convertInchesToTwip,
   ImageRun
 } from 'docx'
 import * as fs from 'fs'
@@ -286,7 +284,6 @@ function wordAddParagraph(args: Record<string, unknown>) {
 
   const themeStyle = doc.theme.word.paragraph
   const format = themeStyle.format
-  const fonts = doc.theme.word.fonts
 
   // 根据样式类型设置不同的外观
   let shading

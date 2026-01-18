@@ -356,7 +356,7 @@ function excelAddChart(args: Record<string, unknown>) {
     return { success: false, message: `工作簿 ${workbookId} 不存在` }
   }
 
-  let sheet = entry.workbook.getWorksheet(sheetName)
+  const sheet = entry.workbook.getWorksheet(sheetName)
   if (!sheet) {
     return { success: false, message: `工作表 ${sheetName} 不存在` }
   }
