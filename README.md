@@ -113,7 +113,7 @@ Add to `claude_desktop_config.json`:
 | `excel_create` | Create workbook |
 | `excel_add_sheet` | Add worksheet |
 | `excel_write_data` | Write data |
-| `excel_add_chart` | Add chart |
+| `excel_add_chart` | Write chart data |
 | `excel_save` | Save workbook |
 
 ---
@@ -157,22 +157,6 @@ npm install -g @erliban/office-mcp-server
 **配置文件位置**：
 - macOS: `~/Library/Application Support/Claude/claude_desktop_config.json`
 - Windows: `%APPDATA%\Claude\claude_desktop_config.json`
-
-#### 指定输出目录（推荐）
-
-```json
-{
-  "mcpServers": {
-    "office": {
-      "command": "npx",
-      "args": ["@erliban/office-mcp-server"],
-      "env": {
-        "OUTPUT_DIR": "/Users/yourname/Documents/生成文档"
-      }
-    }
-  }
-}
-```
 
 ### 🎯 推荐 Prompt
 
@@ -268,7 +252,6 @@ AI 可自动识别文档中的 Mermaid 语法并转换为专业图片：
 | `word_add_list` | 添加列表 | `items`, `ordered`: 有序/无序 |
 | `word_add_code` | 添加代码块 | `code`, `language`: 语言类型 |
 | `word_add_diagram` | 添加 Mermaid 图表 | `mermaid`, `theme`, `width` |
-| `word_add_image` | 添加图片 | `path`, `width`: 宽度(cm) |
 | `word_save` | 保存文档 | `path`: 保存路径 |
 
 #### Excel 表格工具
@@ -278,7 +261,7 @@ AI 可自动识别文档中的 Mermaid 语法并转换为专业图片：
 | `excel_create` | 创建工作簿 | `theme`: 主题名称 |
 | `excel_add_sheet` | 添加工作表 | `name`: 表名 |
 | `excel_write_data` | 写入数据 | `data`: 二维数组 |
-| `excel_add_chart` | 添加图表 | `type`, `dataRange` |
+| `excel_add_chart` | 写入图表数据 | `chartType`, `categories`, `series` |
 | `excel_add_formula` | 添加公式 | `cell`, `formula` |
 | `excel_save` | 保存工作簿 | `path`: 保存路径 |
 

@@ -14,12 +14,13 @@ import {
 
 import { wordTools, handleWordTool } from './tools/word/index.js'
 import { excelTools, handleExcelTool } from './tools/excel/index.js'
+import { VERSION } from './version.js'
 
 // 创建 MCP Server 实例
 const server = new Server(
   {
     name: 'office-mcp-server',
-    version: '0.1.0'
+    version: VERSION
   },
   {
     capabilities: {
