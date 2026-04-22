@@ -19,6 +19,13 @@ export const wordTools: Tool[] = [
   {
     name: 'word_create',
     description: '创建一个新的 Word 文档',
+    annotations: {
+      title: '创建 Word 文档',
+      readOnlyHint: false,
+      destructiveHint: false,
+      idempotentHint: false,
+      openWorldHint: false
+    },
     inputSchema: {
       type: 'object',
       properties: {
@@ -42,6 +49,13 @@ export const wordTools: Tool[] = [
   {
     name: 'word_add_heading',
     description: '添加标题（支持1-6级）',
+    annotations: {
+      title: '添加标题',
+      readOnlyHint: false,
+      destructiveHint: false,
+      idempotentHint: false,
+      openWorldHint: false
+    },
     inputSchema: {
       type: 'object',
       properties: {
@@ -56,6 +70,13 @@ export const wordTools: Tool[] = [
   {
     name: 'word_add_paragraph',
     description: '添加正文段落',
+    annotations: {
+      title: '添加段落',
+      readOnlyHint: false,
+      destructiveHint: false,
+      idempotentHint: false,
+      openWorldHint: false
+    },
     inputSchema: {
       type: 'object',
       properties: {
@@ -75,6 +96,13 @@ export const wordTools: Tool[] = [
   {
     name: 'word_add_table',
     description: '添加表格',
+    annotations: {
+      title: '添加表格',
+      readOnlyHint: false,
+      destructiveHint: false,
+      idempotentHint: false,
+      openWorldHint: false
+    },
     inputSchema: {
       type: 'object',
       properties: {
@@ -93,6 +121,13 @@ export const wordTools: Tool[] = [
   {
     name: 'word_add_list',
     description: '添加有序/无序列表',
+    annotations: {
+      title: '添加列表',
+      readOnlyHint: false,
+      destructiveHint: false,
+      idempotentHint: false,
+      openWorldHint: false
+    },
     inputSchema: {
       type: 'object',
       properties: {
@@ -106,6 +141,13 @@ export const wordTools: Tool[] = [
   {
     name: 'word_add_code',
     description: '添加代码块',
+    annotations: {
+      title: '添加代码块',
+      readOnlyHint: false,
+      destructiveHint: false,
+      idempotentHint: false,
+      openWorldHint: false
+    },
     inputSchema: {
       type: 'object',
       properties: {
@@ -119,6 +161,13 @@ export const wordTools: Tool[] = [
   {
     name: 'word_add_diagram',
     description: '添加 Mermaid 流程图/架构图（自动转换为图片插入）',
+    annotations: {
+      title: '添加流程图',
+      readOnlyHint: false,
+      destructiveHint: false,
+      idempotentHint: false,
+      openWorldHint: false
+    },
     inputSchema: {
       type: 'object',
       properties: {
@@ -138,6 +187,13 @@ export const wordTools: Tool[] = [
   {
     name: 'word_save',
     description: '保存文档',
+    annotations: {
+      title: '保存 Word 文档',
+      readOnlyHint: false,
+      destructiveHint: false,
+      idempotentHint: true,
+      openWorldHint: false
+    },
     inputSchema: {
       type: 'object',
       properties: {

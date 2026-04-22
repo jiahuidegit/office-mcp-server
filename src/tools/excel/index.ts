@@ -19,6 +19,13 @@ export const excelTools: Tool[] = [
   {
     name: 'excel_create',
     description: '创建 Excel 工作簿',
+    annotations: {
+      title: '创建 Excel 工作簿',
+      readOnlyHint: false,
+      destructiveHint: false,
+      idempotentHint: false,
+      openWorldHint: false
+    },
     inputSchema: {
       type: 'object',
       properties: {
@@ -41,6 +48,13 @@ export const excelTools: Tool[] = [
   {
     name: 'excel_add_sheet',
     description: '添加工作表',
+    annotations: {
+      title: '添加工作表',
+      readOnlyHint: false,
+      destructiveHint: false,
+      idempotentHint: false,
+      openWorldHint: false
+    },
     inputSchema: {
       type: 'object',
       properties: {
@@ -54,6 +68,13 @@ export const excelTools: Tool[] = [
   {
     name: 'excel_write_data',
     description: '写入表格数据',
+    annotations: {
+      title: '写入数据',
+      readOnlyHint: false,
+      destructiveHint: false,
+      idempotentHint: false,
+      openWorldHint: false
+    },
     inputSchema: {
       type: 'object',
       properties: {
@@ -76,6 +97,13 @@ export const excelTools: Tool[] = [
   {
     name: 'excel_add_chart',
     description: '写入图表数据到指定位置（exceljs 不支持直接创建图表对象，数据写入后可在 Excel 中手动创建图表）',
+    annotations: {
+      title: '添加图表',
+      readOnlyHint: false,
+      destructiveHint: false,
+      idempotentHint: false,
+      openWorldHint: false
+    },
     inputSchema: {
       type: 'object',
       properties: {
@@ -107,6 +135,13 @@ export const excelTools: Tool[] = [
   {
     name: 'excel_add_formula',
     description: '添加公式',
+    annotations: {
+      title: '添加公式',
+      readOnlyHint: false,
+      destructiveHint: false,
+      idempotentHint: true,
+      openWorldHint: false
+    },
     inputSchema: {
       type: 'object',
       properties: {
@@ -121,6 +156,13 @@ export const excelTools: Tool[] = [
   {
     name: 'excel_set_column_width',
     description: '设置列宽',
+    annotations: {
+      title: '设置列宽',
+      readOnlyHint: false,
+      destructiveHint: false,
+      idempotentHint: true,
+      openWorldHint: false
+    },
     inputSchema: {
       type: 'object',
       properties: {
@@ -134,6 +176,13 @@ export const excelTools: Tool[] = [
   {
     name: 'excel_merge_cells',
     description: '合并单元格',
+    annotations: {
+      title: '合并单元格',
+      readOnlyHint: false,
+      destructiveHint: false,
+      idempotentHint: true,
+      openWorldHint: false
+    },
     inputSchema: {
       type: 'object',
       properties: {
@@ -147,6 +196,13 @@ export const excelTools: Tool[] = [
   {
     name: 'excel_save',
     description: '保存工作簿',
+    annotations: {
+      title: '保存 Excel 工作簿',
+      readOnlyHint: false,
+      destructiveHint: false,
+      idempotentHint: true,
+      openWorldHint: false
+    },
     inputSchema: {
       type: 'object',
       properties: {
